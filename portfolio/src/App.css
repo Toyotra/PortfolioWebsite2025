@@ -1,0 +1,159 @@
+@font-face {
+  font-family: 'neo_bold';
+  src: url("/neo_bold.ttf") format('truetype');
+  font-weight: 100;
+  font-style: normal;
+}
+
+
+
+body {
+  margin:0px;
+  padding:0px;
+  font-family: 'neo_bold', sans-serif;
+}
+
+#background{
+  background: linear-gradient(to right, #000000, #02081e);
+  width:100%;
+  height:100%;
+  position:absolute;
+  z-index:-10;
+}
+
+
+#title{
+  display:flex;
+  justify-content: space-between;
+  align-items:center;
+  background-color:#11d8d875;
+  margin:0px;
+  z-index:5;
+  position:sticky;
+  height:30px;
+  
+}
+
+#title h1{
+  font-size:10px;
+  color:rgb(0, 0, 0);
+  transition:0.5s;
+  margin:3px;
+  margin-left:7px;
+  
+  
+}
+#title h1:hover{
+  font-size:14px;
+  color:rgb(245, 13, 44);
+  transition:0.5s;
+}
+
+#titleButtons {
+  height:100%;
+  margin:0px;
+  padding:0px;
+}
+#titleButtons a{
+  height:100%;
+  margin:0px;
+  padding:0px;
+}
+#titleButtons a button{
+  font-family: 'neo_bold', sans-serif;
+  height:100%;
+  margin:0px;
+  padding:0px;
+  width:200px;
+  border-radius:0%;
+  border-width: 0px;
+  background-color:#000000;
+  color:white;
+  font-size:14px;
+  transition:0.5s;
+}
+#titleButtons a button:hover{
+  background-color:rgba(0, 225, 255, 0.219);
+  color:rgba(186, 203, 255, 0.904);
+  font-size:19px;
+}
+
+
+.cursor {
+  display: inline-block;
+  width: 1ch;
+  animation: blink 1s steps(1) infinite;
+}
+
+
+
+
+@keyframes blink {
+  0%, 50% { opacity: 1; }
+  51%, 100% { opacity: 0; }
+}
+
+.backgroundContainer{
+  width:100%;
+  z-index:-3;
+  position:fixed;
+  margin:0px;
+  left:0;
+  top:0;
+
+
+}
+.backgroundImages{
+  position:absolute;
+  object-fit: cover;
+  widtH:100vw;
+  height:100vh;
+  top:0;
+  left:0;
+}
+
+
+#background1{ animation:anim1 10s infinite;z-index:-4}
+#background2{ animation:anim2 10s infinite; z-index:-5}
+#background3{ animation:anim3 10s infinite; z-index:-6}
+#background4{ animation:anim4 10s infinite; z-index:-7}
+
+@keyframes anim1{
+  0% {opacity:0.5}
+  5% {opacity:1}
+  20% {opacity:1}
+  30% {opacity:0}
+  95% {opacity:0}
+  100% {opacity:0.5}
+}
+@keyframes anim2{
+  0% {opacity:0}
+  20% {opacity:0}
+  30% {opacity:1}
+  45% {opacity:1}
+  55% {opacity:0}
+  100% {opacity:0}
+}
+@keyframes anim3{
+  0% {opacity:0}
+  45% {opacity:0}
+  55% {opacity:1}
+  70% {opacity:1}
+  80% {opacity:0}
+  100% {opacity:0}
+}
+@keyframes anim4{
+  0% {opacity:0.5}
+  5% {opacity:0}
+  70% {opacity:0}
+  80% {opacity:1}
+  95% {opacity:1}
+  100% {opacity:0.5}
+}
+
+.matrixBackground{
+  z-index:-2;
+  position:sticky;
+  margin:0;
+  padding:0;
+}
