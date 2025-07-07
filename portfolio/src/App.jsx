@@ -1,6 +1,16 @@
 import { useState, useEffect } from 'react'
 import './App.css'
 import  Matrix from "./components/Matrix";
+
+import { library } from '@fortawesome/fontawesome-svg-core';
+import { fas } from '@fortawesome/free-solid-svg-icons';
+import { fab } from '@fortawesome/free-brands-svg-icons';
+library.add(fab);
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faEnvelope } from '@fortawesome/free-solid-svg-icons';
+
+library.add(faEnvelope);
+
 function App() {
 
   const [angle, setAngle] = useState(0);
@@ -97,10 +107,10 @@ function App() {
           Jad Menkara: <span className="typewriter">{displayedText}<span className="cursor">|</span></span>
         </h1>
         <div id="titleButtons">
-          <a><button>About Me</button></a>
-          <a><button>Experience</button></a>
-          <a><button>Projects</button></a>
-          <a><button>Contact</button></a>
+          <a href="#startSection"><button>About Me</button></a>
+          <a href="#EXPERIENCE"><button>Experience</button></a>
+          <a href="#PROJECTS"><button>Projects</button></a>
+          <a href="#CONTACTS"><button>Contact</button></a>
         </div>
 
 
@@ -157,6 +167,7 @@ function App() {
           
         </div>
 
+        <h1 className = "sectionTitle"  id="EXPERIENCE"> Experience </h1>
 
         <div id = "bodySection">
 
@@ -217,7 +228,7 @@ function App() {
 
           
          
-          
+        <h1 className = "sectionTitle"  id="PROJECTS"> Projects </h1>
           
           
         </div>
@@ -270,7 +281,7 @@ function App() {
             <div className="project">
                 <div className="projectTitle">
                   <h1><a  href = "https://github.com/Toyotra/BloodStainedVisors">BloodStained Visors</a></h1>
-                  <h3>November 2024</h3>
+                  <h3>June 2025</h3>
                 </div>
                 
                 <p>I created a a Street Fighter Clone in Java that is controlled by real life fighting and computer vision</p>
@@ -282,7 +293,7 @@ function App() {
             <div className="project">
                 <div className="projectTitle">
                   <h1><a  href = "https://www.linkedin.com/posts/dorothy-zheng07_this-weekend-jad-menkara-and-i-competed-in-activity-7177809048770150400-L_4d?utm_source=social_share_send&utm_medium=member_desktop_web&rcm=ACoAAEpzeNUBPpfWjnNlIorSE5EAeiJjYYntvqM">Bionic Arm</a></h1>
-                  <h3>November 2024</h3>
+                  <h3>March 2024</h3>
                 </div>
                 
                 <p>I designed and manufactured a novel bionic arm controlled through sEMG's for science fair in 10th grade</p>
@@ -294,67 +305,35 @@ function App() {
 
             <div className="project">
                 <div className="projectTitle">
-                  <h1><a  href = "https://www.linkedin.com/posts/dorothy-zheng07_this-weekend-jad-menkara-and-i-competed-in-activity-7177809048770150400-L_4d?utm_source=social_share_send&utm_medium=member_desktop_web&rcm=ACoAAEpzeNUBPpfWjnNlIorSE5EAeiJjYYntvqM">Bionic Arm</a></h1>
-                  <h3>November 2024</h3>
+                  <h1><a  href = "https://partner.projectboard.world/ysc/project/novel-thermoelectric-generator-for-automobile-exhaust-waste-heat-recovery">Novel Thermoelectric Generator</a></h1>
+                  <h3>May 2023</h3>
                 </div>
                 
-                <p>I designed and manufactured a novel bionic arm controlled through sEMG's for science fair in 10th grade</p>
+                <p>In ninth grade I designed and manufactured a novel generator for using heat to generate electricity from a car's exhaust</p>
                 <div className = "imgContainer">
-                  <img src="/bionic_arm.jpg"></img>
+                  <img src="https://res.cloudinary.com/projectboard/image/fetch/c_fill,h_500,q_80,w_625/https://firebasestorage.googleapis.com/v0/b/project-leo-mvp.appspot.com/o/projects%252F125139%3Falt%3Dmedia%26token%3Dd60abfa8-4b20-41ce-b28b-0e6dde561547"></img>
                 </div>
             </div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
             </div>
 
         </div>
-        
+
+
+        <h1 className = "sectionTitle" id="CONTACTS"> Contacts </h1>
+
+        <div id="contactsSection">
+            <a href="https://github.com/Toyotra" target="_blank" rel="noopener noreferrer">
+              <FontAwesomeIcon icon={['fab', 'github']} className="awesomeIcon" size="2x"  />
+            </a>
+            <a href="https://linkedin.com/in/jadmenkara" target="_blank" rel="noopener noreferrer">
+              <FontAwesomeIcon icon={['fab', 'linkedin']} className="awesomeIcon" size="2x"  />
+            </a>
+            <a href="mailto:jadmenkara@gmail.com" target="_blank" rel="noopener noreferrer">
+              <FontAwesomeIcon icon={faEnvelope} className="awesomeIcon" size="2x"  />
+            </a>
+        </div>
+
+
     </>
   )
 }
