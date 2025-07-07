@@ -1,5 +1,5 @@
 .mrl-container {
-    background-color: rgba(0, 0, 0, 0.05);
+    background-color: rgba(41, 43, 40, 0);
     z-index:-1;
-    position:absolute;
+    position:fixed;
 }

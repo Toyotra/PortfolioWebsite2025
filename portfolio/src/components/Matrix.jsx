@@ -35,10 +35,10 @@ const renderMatrix = (ref, color) => {
     }
 
     const render = () => {
-        context.fillStyle = "rgba(0, 0, 0, 0.02)"; // black w a tiny bit of alpha
+        context.fillStyle = "rgba(0, 0, 0, 0.03)"; // black w a tiny bit of alpha
         context.fillRect(0, 0, canvas.width, canvas.height);
 
-        context.fillStyle = color ? color : "rgba(11, 181, 240, 0.22)";
+        context.fillStyle = color ? color : "rgba(240, 5, 6, 0.22)";
         context.font = fontSize + "px monospace";
 
         for (let i = 0; i < rainDrops.length; i++) {
